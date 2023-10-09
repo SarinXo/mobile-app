@@ -3,13 +3,11 @@
 xmlns:app="http://schemas.android.com/apk/res-auto"
 android:layout_width="match_parent"
 android:layout_height="match_parent">
-<!--android:background="@drawable/frog"-->
 
     <RelativeLayout
         android:id="@+id/rellay1"
         android:layout_width="match_parent"
-        android:layout_height="650dp">
-
+        android:layout_height="match_parent">
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cardView1"
@@ -17,13 +15,13 @@ android:layout_height="match_parent">
             android:layout_height="wrap_content"
             android:layout_marginStart="30dp"
             android:layout_marginTop="30dp"
-
-            android:layout_marginRight="30dp"
+            android:layout_marginEnd="30dp"
+            app:cardBackgroundColor="#FFFFFF"
             app:cardElevation="20dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_gravity="center_horizontal"
                 android:orientation="vertical">
 
@@ -33,26 +31,29 @@ android:layout_height="match_parent">
                     android:background="@drawable/frame">
 
                     <TextView
-                        android:id="@+id/username"
+                        android:id="@+id/date"
                         android:layout_width="match_parent"
                         android:layout_height="59dp"
                         android:gravity="center"
-                        android:hint="Дата"
-                        android:textColor="@color/black" />
-
+                        android:hint="Date"
+                        android:textColor="@color/black"
+                        android:textSize="30sp" />
 
                 </LinearLayout>
+
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/frame">
+
                     <TextView
                         android:layout_width="40dp"
                         android:layout_height="match_parent"
-                        android:gravity="center"
                         android:background="@drawable/frame"
-                        android:hint="1" />
+                        android:gravity="center"
+                        android:hint="1"
+                        android:textSize="24sp" />
 
                     <TextView
                         android:id="@+id/lesson1"
@@ -61,10 +62,11 @@ android:layout_height="match_parent">
 
                         android:gravity="center"
                         android:hint="lesson1"
-                        android:textColor="@color/black" />
-
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
 
                 </LinearLayout>
+
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -74,9 +76,10 @@ android:layout_height="match_parent">
                     <TextView
                         android:layout_width="40dp"
                         android:layout_height="match_parent"
-                        android:gravity="center"
                         android:background="@drawable/frame"
-                        android:hint="2" />
+                        android:gravity="center"
+                        android:hint="2"
+                        android:textSize="24sp" />
 
                     <TextView
                         android:id="@+id/lesson2"
@@ -84,10 +87,11 @@ android:layout_height="match_parent">
                         android:layout_height="60dp"
                         android:gravity="center"
                         android:hint="lesson2"
-                        android:textColor="@color/black" />
-
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
 
                 </LinearLayout>
+
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -97,9 +101,10 @@ android:layout_height="match_parent">
                     <TextView
                         android:layout_width="40dp"
                         android:layout_height="match_parent"
-                        android:gravity="center"
                         android:background="@drawable/frame"
-                        android:hint="3" />
+                        android:gravity="center"
+                        android:hint="3"
+                        android:textSize="24sp" />
 
                     <TextView
                         android:id="@+id/lesson3"
@@ -107,10 +112,11 @@ android:layout_height="match_parent">
                         android:layout_height="60dp"
                         android:gravity="center"
                         android:hint="lesson3"
-                        android:textColor="@color/black" />
-
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
 
                 </LinearLayout>
+
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -120,9 +126,10 @@ android:layout_height="match_parent">
                     <TextView
                         android:layout_width="40dp"
                         android:layout_height="match_parent"
-                        android:gravity="center"
                         android:background="@drawable/frame"
-                        android:hint="4" />
+                        android:gravity="center"
+                        android:hint="4"
+                        android:textSize="24sp" />
 
                     <TextView
                         android:id="@+id/lesson4"
@@ -130,9 +137,11 @@ android:layout_height="match_parent">
                         android:layout_height="60dp"
                         android:gravity="center"
                         android:hint="lesson4"
-                        android:textColor="@color/black" />
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
 
                 </LinearLayout>
+
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -142,9 +151,10 @@ android:layout_height="match_parent">
                     <TextView
                         android:layout_width="40dp"
                         android:layout_height="match_parent"
-                        android:gravity="center"
                         android:background="@drawable/frame"
-                        android:hint="5" />
+                        android:gravity="center"
+                        android:hint="5"
+                        android:textSize="24sp" />
 
                     <TextView
                         android:id="@+id/lesson5"
@@ -152,10 +162,11 @@ android:layout_height="match_parent">
                         android:layout_height="60dp"
                         android:gravity="center"
                         android:hint="lesson5"
-                        android:textColor="@color/black" />
-
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
 
                 </LinearLayout>
+
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -165,9 +176,10 @@ android:layout_height="match_parent">
                     <TextView
                         android:layout_width="40dp"
                         android:layout_height="match_parent"
-                        android:gravity="center"
                         android:background="@drawable/frame"
-                        android:hint="6" />
+                        android:gravity="center"
+                        android:hint="6"
+                        android:textSize="24sp" />
 
                     <TextView
                         android:id="@+id/lesson6"
@@ -175,10 +187,11 @@ android:layout_height="match_parent">
                         android:layout_height="60dp"
                         android:gravity="center"
                         android:hint="lesson6"
-                        android:textColor="@color/black" />
-
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
 
                 </LinearLayout>
+
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -188,9 +201,10 @@ android:layout_height="match_parent">
                     <TextView
                         android:layout_width="40dp"
                         android:layout_height="match_parent"
-                        android:gravity="center"
                         android:background="@drawable/frame"
-                        android:hint="7" />
+                        android:gravity="center"
+                        android:hint="7"
+                        android:textSize="24sp" />
 
                     <TextView
                         android:id="@+id/lesson7"
@@ -198,67 +212,67 @@ android:layout_height="match_parent">
                         android:layout_height="60dp"
                         android:gravity="center"
                         android:hint="lesson7"
-                        android:textColor="@color/black" />
-
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
 
                 </LinearLayout>
 
-            </LinearLayout>
 
+            </LinearLayout>
         </androidx.cardview.widget.CardView>
 
+        <LinearLayout
+            android:id="@+id/linlay1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/custom_edittext"
+                android:gravity="center"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp">
+
+                <Button
+                    android:id="@+id/back_button"
+                    android:layout_width="192dp"
+                    android:layout_height="80dp"
+                    android:background="@drawable/custom_edittext"
+                    android:text="Back">
+
+                </Button>
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/custom_edittext"
+                android:gravity="center"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp">
+
+                <Button
+                    android:id="@+id/next_button"
+                    android:layout_width="192dp"
+                    android:layout_height="80dp"
+                    android:background="@drawable/custom_edittext"
+                    android:text="Next">
+
+                </Button>
+            </RelativeLayout>
+
+        </LinearLayout>
 
     </RelativeLayout>
 
-    <LinearLayout
-        android:id="@+id/linlay1"
-        android:layout_width="match_parent"
-        android:layout_height="109dp"
-        android:layout_below="@id/rellay1"
-        android:layout_marginTop="3dp"
-        android:orientation="horizontal"
-        android:baselineAligned="false">
 
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_weight="1"
-            android:background="@drawable/custom_edittext"
-            android:gravity="center"
-            android:paddingTop="5dp"
-            android:paddingBottom="5dp">
-
-            <Button
-                android:layout_width="192dp"
-                android:layout_height="80dp"
-                android:background="@drawable/custom_edittext"
-                android:text="Back">
-
-            </Button>
-
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_weight="1"
-            android:background="@drawable/custom_edittext"
-            android:gravity="center"
-            android:paddingBottom="5dp"
-            android:paddingTop="5dp">
-
-            <Button
-                android:layout_width="192dp"
-                android:layout_height="80dp"
-                android:background="@drawable/custom_edittext"
-                android:text="Next">
-
-            </Button>
-
-        </RelativeLayout>
-    </LinearLayout>
 
 </RelativeLayout>
