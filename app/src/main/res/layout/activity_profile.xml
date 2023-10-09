@@ -31,7 +31,6 @@
                 android:layout_marginEnd="9dp"
                 android:layout_marginBottom="9dp"
                 android:adjustViewBounds="true"
-                android:background=""
                 android:padding="3dp"
                 android:scaleType="centerInside"
                 android:src="@drawable/circle" />
@@ -86,7 +85,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                tools:ignore="UselessParent">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -120,10 +120,13 @@
             android:paddingTop="5dp">
 
             <Button
+                android:id="@+id/timetableButton"
                 android:layout_width="192dp"
                 android:layout_height="wrap_content"
                 android:background="@drawable/custom_edittext"
-                android:text="Timetable"></Button>
+                android:text="Timetable">
+
+            </Button>
 
         </RelativeLayout>
 
