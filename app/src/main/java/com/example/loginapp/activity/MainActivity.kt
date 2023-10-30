@@ -1,12 +1,17 @@
 package com.example.loginapp.activity
 
+import android.app.NotificationChannel
+import android.app.NotificationManager
+import android.content.Context
+import android.os.Build
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.app.NotificationCompat
 import com.example.loginapp.R
 import com.example.loginapp.activity.logic.auth.retrofit.api.MrsuApi
-import com.example.loginapp.activity.logic.auth.retrofit.dto.AuthRequest
 import com.example.loginapp.databinding.ActivityMainBinding
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -19,8 +24,6 @@ import retrofit2.converter.gson.GsonConverterFactory
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
-    private lateinit var username : EditText
-    private lateinit var password: EditText
     private lateinit var loginButton: Button
     private val MRSU_URL : String = "https://p.mrsu.ru"
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -44,13 +47,40 @@ class MainActivity : AppCompatActivity() {
 
         loginButton.setOnClickListener{
             CoroutineScope(Dispatchers.IO).launch {
-                val userToken = mrsuApi.getToken(
-                    username = binding.login.text.toString(),
-                    password = binding.password.text.toString()
-                )
+                try{
+                    val userToken = mrsuApi.getToken(
+                        username = binding.login.text.toString(),
+                        password = binding.password.text.toString()
+                    )
 
-                binding.apply {
-                    loginText.text = userToken.tokenType
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                        val channelId = "my_channel_id"
+                        val channelName = "My Channel"
+                        val importance = NotificationManager.IMPORTANCE_DEFAULT
+                        val channel = NotificationChannel(channelId, channelName, importance)
+                        val notificationManager = getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
+                        notificationManager.createNotificationChannel(channel)
+                    }
+
+                    val notificationId = 1
+                    val channelId = "my_channel_id"
+
+                    val notificationBuilder = NotificationCompat.Builder(applicationContext, channelId)
+                        .setSmallIcon(R.drawable.circle)
+                        .setContentTitle("Success")
+                        .setContentText("Вы были успешно залогинены")
+                        .setPriority(NotificationCompat.PRIORITY_DEFAULT)
+                        .setAutoCancel(true)
+
+                    val notificationManager = getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
+                    notificationManager.notify(notificationId, notificationBuilder.build())
+
+                }catch (e: Exception){
+                    Toast.makeText(
+                        this@MainActivity,
+                        "Неверный логин или пароль",
+                        Toast.LENGTH_SHORT
+                    ).show()
                 }
             }
         }
